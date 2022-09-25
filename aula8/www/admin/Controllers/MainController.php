@@ -21,7 +21,7 @@ class MainController{
 
     public function logout(){
         session_destroy();
-        header('Location:?controller=main&action=login.php');
+        header('Location:?controller=main&action=login');
     }
 }
 

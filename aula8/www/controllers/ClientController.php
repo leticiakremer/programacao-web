@@ -27,7 +27,7 @@ class ClientController{
             'phone' => $_POST['phone'],
             'gender' => $_POST['gender'],
             'accept' => $accept,
-            'accpetView' => $acceptView
+            'acceptView' => $acceptView
         );
 
         require_once('views/templates/header.php');

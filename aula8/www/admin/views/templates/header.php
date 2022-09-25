@@ -22,7 +22,7 @@
   <title>Aula 8 de PW</title>
 </head>
 <body>
-<header class="p-3 text-center bg-dark">
+<header class="p-3 text-white text-center bg-dark">
   <h1>Área administrativa</h1>
     <a href ="?controller=main&action=logout">Sair</a>
   
@@ -33,7 +33,7 @@
     <ul class="navbar-nav">
         <h2>Menu</h2>
         <li class="nav-item">
-            <a class ="nav-link" href="?controller=main&action=index">Home</a>
+            <a class ="nav-link" href="/?controller=site&action=home">Home</a>
         </li>
         <h4>Clientes</h4>
         <li class="nav-item">
