@@ -10,27 +10,27 @@
     </tr>
 
     <?php
-        foreach($arrayClients as $client){
+    foreach ($arrayClients as $client) {
     ?>
         <tr>
             <td>
-                <?=$client['idClient']?>
+                <?= $client['idClient'] ?>
             </td>
             <td>
-                <?=$client['name']?>
+                <?= $client['name'] ?>
             </td>
             <td>
-                <?=$client['email']?>
+                <?= $client['email'] ?>
             </td>
             <td>
-                <?=$client['phone']?>
+                <?= $client['phone'] ?>
             </td>
             <td>
-                <?=$client['address']?>
+                <?= $client['address'] ?>
             </td>
         </tr>
     <?php
-        }
+    }
     ?>
-    
+
 </table>

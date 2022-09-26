@@ -8,29 +8,29 @@
         <th>Telefone</th>
         <th>Endereço</th>
         <th>Açōes</th>
-    </tr>   
+    </tr>
 
     <?php
-        foreach($arrayClients as $client){
+    foreach ($arrayClients as $client) {
     ?>
         <tr>
             <td>
-                <?=$client['idClient']?>
+                <?= $client['idClient'] ?>
             </td>
             <td>
-                <?=$client['name']?>
+                <?= $client['name'] ?>
             </td>
             <td>
-                <?=$client['email']?>
+                <?= $client['email'] ?>
             </td>
             <td>
-                <?=$client['phone']?>
+                <?= $client['phone'] ?>
             </td>
             <td>
-                <?=$client['address']?>
+                <?= $client['address'] ?>
             </td>
             <td>
-                <a href="?controller=client&action=detailsClient&id=<?=$client['idClient']?>">Detalhes</a>
+                <a href="?controller=client&action=detailsClient&id=<?= $client['idClient'] ?>">Detalhes</a>
 
             </td>
 

@@ -3,6 +3,6 @@
     Página Home
   </h1>
   <p>
-   Bem Vindo a Área Administrativa.
+    Bem Vindo a Área Administrativa.
   </p>
 </main>
