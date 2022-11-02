@@ -1,12 +1,13 @@
 <?php
 class UserController
 {
-  public function validateLogin(){
+  public function validateLogin()
+  {
     $userData  = json_decode(file_get_contents("php://input"));
 
-    $userName = $userData -> user;
-    $password = $userData -> password;
-    
+    $userName = $userData->user;
+    $password = $userData->password;
+
     require_once('models/UserModel.php');
     $UserModel = new UserModel();
 
@@ -14,7 +15,7 @@ class UserController
 
     if ($user = $result->fetch_assoc()) {
       if ($password == $user['password']) {
-        $this -> createJWT($user);
+        $this->createJWT($user);
       } else {
         echo 'Senha inválida';
       }
@@ -23,39 +24,48 @@ class UserController
     }
   }
 
-  public function createJWT($user){
+  public function createJWT($user)
+  {
     $header = [
-        'alg' => 'HS256',
-        'typ' => 'JWT'
+      'alg' => 'HS256',
+      'typ' => 'JWT'
     ];
     $header = json_encode($header);
     $header = base64_encode($header);
-    $header = str_replace(['+', '/', '='], ['-', '_',''],$header); //base64url
+    $header = str_replace(['+', '/', '='], ['-', '_', ''], $header); //base64url
 
     $payload = [
-        'iss' => 'localhost',
-        'name' => $user['name'],
-        'user' => $user['user'],
-        'adm' => $user['admin']
+      'iss' => 'localhost',
+      'name' => $user['name'],
+      'user' => $user['user'],
+      'adm' => $user['admin']
     ];
     $payload = json_encode($payload);
     $payload = base64_encode($payload);
-    $payload = str_replace(['+', '/', '='], ['-', '_',''],$payload); //base64url
+    $payload = str_replace(['+', '/', '='], ['-', '_', ''], $payload); //base64url
 
-    $signature = hash_hmac('sha256', "$header.$payload", 'minha-senha',true);
+    $signature = hash_hmac('sha256', "$header.$payload", 'minha-senha', true);
     $signature = base64_encode($signature);
-    $signature = str_replace(['+', '/', '='], ['-', '_',''],$signature); //base64url
+    $signature = str_replace(['+', '/', '='], ['-', '_', ''], $signature); //base64url
 
-    $token = $header . ".". $payload . ".". $signature;
+    $token = $header . "." . $payload . "." . $signature;
 
-    header ('Content-Type: application/json');
-    echo ('{"acess": "true", "token":"'.$token.'"}');
+    header('Content-Type: application/json');
+    echo ('{"access": "true", "token":"' . $token . '"}');
   }
 
-  public function isAdmin(){
+  public function isAdmin()
+  {
     $header = apache_request_headers();
-    $token = $header ['Authorization'];
-    $token = str_replace ("Bearer", "", $token); //se tiver o prefixo Bearer remover
+
+    if (!isset($header['Authorization'])) {
+      header('Content-Type: application/json');
+      echo ('{"access":"false","message":"Token de autorização não informado"}');
+      return false;
+    }
+
+    $token = $header['Authorization'];
+    $token = str_replace("Bearer ", "", $token); //se tiver o prefixo Bearer remover
 
     $part = explode(".", $token);
     $header = $part[0];
@@ -74,12 +84,12 @@ class UserController
         return true;
       } else {
         header('Content-Type: application/json');
-        echo ('{"acess","false","message":"Nivel de acesso inválido"}');
+        echo ('{"access":"true","message":"Nivel de acesso inválido"}');
         return false;
       }
     } else {
       header('Content-Type: application/json');
-      echo ('{"acess","false","message":"Token inválido"}');
+      echo ('{"access":"false","message":"Token inválido"}');
       return false;
     }
   }

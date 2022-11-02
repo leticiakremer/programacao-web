@@ -41,7 +41,7 @@ class ClientController{
         header('Content-Type: application/json');
         echo('
             {
-                "error": "1",
+                "success": "1",
                 "message": "Cliente inserido";
             }'
         );
@@ -54,7 +54,7 @@ class ClientController{
         header('Content-Type: application/json');
         echo('
             {
-                "error": "2",
+                "success": "2",
                 "message": "Cliente alterado";
             }'
         );
@@ -65,7 +65,7 @@ class ClientController{
         header('Content-Type: application/json');
         echo('
             {
-                "error": "3",
+                "success": "3",
                 "message": "Cliente deletado";
             }'
         );
