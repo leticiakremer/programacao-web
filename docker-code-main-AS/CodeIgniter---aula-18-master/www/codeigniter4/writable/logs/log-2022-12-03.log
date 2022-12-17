@@ -1,0 +1,18 @@
+CRITICAL - 2022-12-03 21:11:08 --> Invalid file: admin/client/insertClient.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/client/insertClient.php')
+ 2 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('admin/client/insertClient', [], true)
+ 3 APPPATH/Controllers/Admin/Client.php(22): view('admin/client/insertClient')
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Client->insertClient()
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Client))
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-03 21:12:37 --> Invalid file: admin/client/insertClient.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/client/insertClient.php')
+ 2 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('admin/client/insertClient', [], true)
+ 3 APPPATH/Controllers/Admin/Client.php(22): view('admin/client/insertClient')
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Client->insertClient()
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Client))
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

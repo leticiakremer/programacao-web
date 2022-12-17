@@ -1,0 +1,47 @@
+nav {
+    background-color: #000000;
+    color: #e7e7e7;
+    min-height: 400px;
+}
+
+nav a:link,
+nav a:visited,
+nav a:hover,
+nav a:active {
+    text-decoration: none;
+    color: #e7e7e7;
+}
+
+section {
+    color: #000000;
+    background-color: #f7f7f7;
+}
+
+footer {
+    background-color: #ededed;
+    color: #000000;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+menu {
+    margin-bottom: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    color: rgb(13, 202, 240);
+}
+
+#sair {
+    color: rgb(65, 223, 255)
+}

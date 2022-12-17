@@ -1,0 +1,30 @@
+CRITICAL - 2022-12-07 01:07:03 --> Invalid file: site/home.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('site/home.php')
+ 2 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('site/home', [], true)
+ 3 APPPATH/Controllers/Site.php(16): view('site/home')
+ 4 APPPATH/Controllers/Site.php(8): App\Controllers\Site->view()
+ 5 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Site->index()
+ 6 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site))
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-07 01:07:08 --> Invalid file: site/home.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('site/home.php')
+ 2 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('site/home', [], true)
+ 3 APPPATH/Controllers/Site.php(16): view('site/home')
+ 4 APPPATH/Controllers/Site.php(8): App\Controllers\Site->view()
+ 5 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Site->index()
+ 6 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site))
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-07 01:07:29 --> Invalid file: site/home.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('site/home.php')
+ 2 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('site/home', [], true)
+ 3 APPPATH/Controllers/Site.php(16): view('site/home')
+ 4 APPPATH/Controllers/Site.php(8): App\Controllers\Site->view()
+ 5 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Site->index()
+ 6 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site))
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

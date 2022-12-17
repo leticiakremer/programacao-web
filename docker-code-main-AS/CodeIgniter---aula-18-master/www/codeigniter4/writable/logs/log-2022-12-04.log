@@ -1,0 +1,20 @@
+CRITICAL - 2022-12-04 17:54:14 --> Undefined variable $Clients
+in APPPATH/Views/client/listClients.php on line 12.
+ 1 APPPATH/Views/client/listClients.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Clients', 'APPPATH/Views/client/listClients.php', 12)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/client/listClients.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('client/listClients', [], true)
+ 5 APPPATH/Controllers/Client.php(15): view('client/listClients', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Client->listClients()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-04 21:03:29 --> syntax error, unexpected token "return", expecting "," or ";"
+in APPPATH/Controllers/Admin/Admin.php on line 31.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH/Controllers/Admin/Admin.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\Admin')
+ 4 SYSTEMPATH/CodeIgniter.php(877): class_exists('\\App\\Controllers\\Admin\\Admin', true)
+ 5 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
